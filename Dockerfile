@@ -14,9 +14,10 @@ RUN apk add --no-cache wget bash \
     && mkdir /opt \
     && wget -q -O - $MIRROR/zookeeper/zookeeper-$VERSION/zookeeper-$VERSION.tar.gz | tar -xzf - -C /opt \
     && ls -l /opt \
-    && mv /opt/zookeeper-$VERSION /opt/zookeeper \
-    && ls -l /opt/zookeeper/conf \
-    && cp /opt/zookeeper/conf/zoo_sample.cfg /opt/zookeeper/conf/zoo.cfg \
+    && mv /opt/zookeeper-$VERSION $ZOOKEEPER_HOME \
+    && ls -l $ZOOKEEPER_HOME/conf \
+    && cp $ZOOKEEPER_HOME/conf/zoo_sample.cfg $ZOOKEEPER_HOME/conf/zoo.cfg \
+    && rm $ZOOKEEPER_HOME/conf/log4j.properties \
     && mkdir -p /var/zookeeper
 COPY apache-log4j-extras-1.2.17.jar $ZOOKEEPER_HOME/lib/ 
 COPY log4j.properties $ZOOKEEPER_HOME/conf/ 
