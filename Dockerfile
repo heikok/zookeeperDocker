@@ -19,6 +19,7 @@ RUN apk add --no-cache wget bash \
     && cp /opt/zookeeper/conf/zoo_sample.cfg /opt/zookeeper/conf/zoo.cfg \
     && mkdir -p /var/zookeeper
 COPY apache-log4j-extras-1.2.17.jar $ZOOKEEPER_HOME/lib/ 
+COPY log4j.properties $ZOOKEEPER_HOME/conf/ 
 
 EXPOSE 2181 2888 3888
 
