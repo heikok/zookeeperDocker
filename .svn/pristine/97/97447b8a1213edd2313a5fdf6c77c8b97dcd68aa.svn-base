@@ -9,7 +9,7 @@ The docker image is based on AlpineLinux.
 
 ## Supported tags and Dockerfile links
 
--	[`0.1`, `latest` (*Dockerfile*)](https://github.com/heikok/zookeaperDocker/blob/master/0.1/Dockerfile)
+-	[`0.1`, `lastest` (*Dockerfile*)](https://github.com/heikok/zookeaperDocker/blob/master/0.1/Dockerfile)
 
 ## Run Examples
 
