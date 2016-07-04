@@ -13,8 +13,9 @@ For the next release it is planned to have a template engine in use when generat
 ## Supported tags and Dockerfile links
 
 ### Zookeeper 3.4.8 based
--       [`0.5`, `latest` (*Dockerfile*)](https://github.com/heikok/zookeaperDocker/blob/master/0.5/Dockerfile)
-
+#### [`0.6`, `latest` (*Dockerfile*)](https://github.com/heikok/zookeaperDocker/blob/master/0.6/Dockerfile)
+- changed to org.apache.log4j.EnhancedPatternLayout in log4j.properties to add timezone support for timestamps
+#### [`0.5`, `latest` (*Dockerfile*)](https://github.com/heikok/zookeaperDocker/blob/master/0.5/Dockerfile)
 ## Run Examples
 
 ### docker-cli
