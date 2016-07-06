@@ -20,6 +20,7 @@ RUN apk add --no-cache wget bash \
     && rm $ZOOKEEPER_HOME/conf/log4j.properties \
     && mkdir -p /var/zookeeper
 COPY apache-log4j-extras-1.2.17.jar $ZOOKEEPER_HOME/lib/ 
+COPY jsonevent-layout-1.7.jar $ZOOKEEPER_HOME/lib/jsonevent-layout-1.7.jar 
 COPY log4j.properties $ZOOKEEPER_HOME/conf/ 
 
 EXPOSE 2181 2888 3888
